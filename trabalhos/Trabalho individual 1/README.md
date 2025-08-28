@@ -45,7 +45,7 @@ A lógica implementada pode ser encontrada no arquivo [`main.py`](./codigo/main.
 #### Análise da complexidade ciclomática:
 **Grafo:**
 
-<img alt="banner"  src="./assets/images/Grafo.png"/>
+<img alt="grafo"  src="../../assets/images/Grafo.png"/>
 
 **Nós (N):**
 - N1: Início da função.
