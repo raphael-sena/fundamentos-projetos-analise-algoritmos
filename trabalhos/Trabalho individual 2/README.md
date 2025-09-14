@@ -174,6 +174,15 @@ comparações, respectivamente.
 > disciplina solicita explicitamente a abordagem de divisão e conquista
 > recursiva.
 
+### Diagrama de Recursão (MaxMin Select)
+
+O algoritmo MaxMin Select divide recursivamente a sequência em subproblemas menores,
+combinando os resultados até encontrar o **menor e maior elemento**.
+
+Abaixo, a árvore de recursão ilustra o processo:
+
+![Diagrama da recursão](../../assets/images/maxmin-select-diagrama.png)
+
 
 ## Como executar o projeto
 
@@ -336,3 +345,4 @@ linear em `n`.
   disciplina).
 - Livro clássico: Cormen, Leiserson, Rivest, Stein — *Introduction to
   Algorithms* (seção sobre análise de algoritmos e teorema mestre).
+
