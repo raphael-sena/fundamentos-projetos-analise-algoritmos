@@ -13,3 +13,4 @@ Repositório dedicado aos estudos da disciplina de Fundamentos de Projeto e Aná
 Os trabalhos avaliativos estão organizados, individualmente, em seus respectivos subdiretórios:
 
 - [Trabalho individual 1 (Karatsuba)](/trabalhos/Trabalho%20individual%201/)
+- [Trabalho individual 2 (Max-Min Selector)](/trabalhos/Trabalho%20individual%202/)
