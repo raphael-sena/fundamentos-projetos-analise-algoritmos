@@ -56,57 +56,57 @@ def removerZerosAEsquerda(s):
     return s
 
 
-def multiplicar(A, B):
+def multiplicar(A, B): # +1
     # Caso base: se os números forem pequenos, multiplica diretamente
-    if len(A) < 10 or len(B) < 10:
-        return str(int(A) * int(B))
+    if len(A) < 10 or len(B) < 10: # +1
+        return str(int(A) * int(B)) # +1
 
-    n = max(len(A), len(B))
-    n2 = n // 2
+    n = max(len(A), len(B)) # +1
+    n2 = n // 2 # +1
 
     # Preenche os números com zeros à esquerda para igualar os tamanhos
-    A = A.zfill(n)
-    B = B.zfill(n)
+    A = A.zfill(n) # +1
+    B = B.zfill(n) # +1
 
     # Divide os números ao meio
-    Al, Ar = A[:n2], A[n2:]
-    Bl, Br = B[:n2], B[n2:]
+    Al, Ar = A[:n2], A[n2:] # +1
+    Bl, Br = B[:n2], B[n2:] # +1
 
     # Karatsuba: calcula os 3 produtos parciais recursivamente
-    p = multiplicar(Al, Bl)
-    q = multiplicar(Ar, Br)
-    r = multiplicar(encontrarSoma(Al, Ar), encontrarSoma(Bl, Br))
-    r = encontrarDiferenca(r, encontrarSoma(p, q))
+    p = multiplicar(Al, Bl) # +1
+    q = multiplicar(Ar, Br) # +1
+    r = multiplicar(encontrarSoma(Al, Ar), encontrarSoma(Bl, Br)) # +1
+    r = encontrarDiferenca(r, encontrarSoma(p, q)) # +1
 
     # Combina os resultados (p * 10^2m + r * 10^m + q)
-    return removerZerosAEsquerda(encontrarSoma(encontrarSoma(p + '0' * (2 * n2), r + '0' * n2), q))
+    return removerZerosAEsquerda(encontrarSoma(encontrarSoma(p + '0' * (2 * n2), r + '0' * n2), q)) # +1
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # +1
     # Leitura dos números do teclado
-    A = input("Digite o primeiro número: ").strip()
-    B = input("Digite o segundo número: ").strip()
+    A = input("Digite o primeiro número: ").strip() # +1
+    B = input("Digite o segundo número: ").strip() # +1
 
     # Medir o tempo de execução
-    inicioKaratsuba = time.time()
+    inicioKaratsuba = time.time() # +1
 
-    resultadoKaratsuba = multiplicar(A, B)
+    resultadoKaratsuba = multiplicar(A, B) # +1
 
-    fimKaratsuba = time.time()
-
-    # Mostrar o resultado e o tempo
-    print(f"\nResultado Karatsuba: {resultadoKaratsuba}")
-    print(f"Tempo de execução: {fimKaratsuba - inicioKaratsuba:.6f} segundos")
-
-    inicioMultiplicaçãoNormal = time.time()
-
-    resultadoMultiplicaçãoNormal  = str(int(A) * int(B))
-
-    fimMultiplicaçãoNormal = time.time()
+    fimKaratsuba = time.time() # +1
 
     # Mostrar o resultado e o tempo
-    print(f"\nResultado Multiplicação Normal: {resultadoMultiplicaçãoNormal}")
-    print(f"Tempo de execução: {fimMultiplicaçãoNormal - inicioMultiplicaçãoNormal:.6f} segundos")
+    print(f"\nResultado Karatsuba: {resultadoKaratsuba}") # +1
+    print(f"Tempo de execução: {fimKaratsuba - inicioKaratsuba:.6f} segundos") # +1
+
+    inicioMultiplicaçãoNormal = time.time() # +1
+
+    resultadoMultiplicaçãoNormal  = str(int(A) * int(B)) # +1
+
+    fimMultiplicaçãoNormal = time.time() # +1
+
+    # Mostrar o resultado e o tempo
+    print(f"\nResultado Multiplicação Normal: {resultadoMultiplicaçãoNormal}") # +1
+    print(f"Tempo de execução: {fimMultiplicaçãoNormal - inicioMultiplicaçãoNormal:.6f} segundos") # +1
 
 
 
